@@ -8,7 +8,7 @@
 #
 
 function gitremote
-  if available git
+  if type -t git > /dev/null
     set name (git config github.user)
     switch $argv[1]
       case ssh
